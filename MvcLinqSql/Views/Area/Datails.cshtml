@@ -1,0 +1,22 @@
+﻿@model MvcLinqSql.Models.area
+
+@{
+    ViewBag.Title = "Datails";
+}
+
+<h2>Datails</h2>
+
+<fieldset>
+    <legend>area</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.area_des)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.area_des)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.area_cod }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

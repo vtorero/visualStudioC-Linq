@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bd_empresa" Class="DataEmpresaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=WS50A2VJIMENEZ\SQLEXPRESS;Initial Catalog=bd_empresa;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="bd_empresaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.area" Member="area">
+    <Type Name="area">
+      <Column Name="area_cod" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="area_des" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.PR_ACTUALIZAR_AREA" Method="PR_ACTUALIZAR_AREA">
+    <Parameter Name="codigo2" Type="System.Int32" DbType="Int" />
+    <Parameter Name="descripcion2" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PR_BUSCAR_AREA" Method="PR_BUSCAR_AREA">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="PR_BUSCAR_AREAResult">
+      <Column Name="area_cod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="area_des" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PR_ELIMINAR_AREA" Method="PR_ELIMINAR_AREA">
+    <Parameter Name="codigo3" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PR_INSERTAR_AREA" Method="PR_INSERTAR_AREA">
+    <Parameter Name="descripcion_area" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PR_LISTAR_AREA" Method="PR_LISTAR_AREA">
+    <ElementType Name="PR_LISTAR_AREAResult">
+      <Column Name="area_cod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="area_des" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
